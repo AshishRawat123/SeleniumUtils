@@ -1,6 +1,10 @@
 package com.Utilities;
 
 import java.io.File;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +23,7 @@ public class Utils extends BaseTest{
 	
 	public static void waitUntil_Ajax_complete() {
 		
+			@SuppressWarnings("deprecation")
 			WebDriverWait wait = new WebDriverWait(driver, 60);
 			try {
 			wait.until(new Function<WebDriver,Boolean>() {
@@ -26,7 +31,8 @@ public class Utils extends BaseTest{
 				public Boolean apply(WebDriver driver) {
 					JavascriptExecutor je = (JavascriptExecutor) driver;
 					 if(Boolean.parseBoolean(String.valueOf(je.executeScript(" return jQuery.active === 0")))) {
-						return Boolean.parseBoolean(String.valueOf(je.executeScript(" return jQuery.active === 0")));
+						return Boolean.parseBoolean(String.valueOf(je.executeScript(" return jQuery.active === 0")
+								));
 					}
 					 return false;
 				}
@@ -37,7 +43,7 @@ public class Utils extends BaseTest{
 	
 	public static boolean is_Downloaded(String path, String File_Name) {
 		
-		path = (path==null)?Contants.DownLoad_Folder:path;
+		path = (path==null)?Contants.Download_Folder:path;
 		File file = new File(path);
 	    String[] fileList = file.list();
 	    for(String filez : fileList) {
@@ -50,6 +56,4 @@ public class Utils extends BaseTest{
 		return false;
 	}
 	
-	
-
 }

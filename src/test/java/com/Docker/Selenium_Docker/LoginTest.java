@@ -32,7 +32,7 @@ public class LoginTest extends BaseTest{
 			Assert.assertEquals("Invalid username/password. Please try again.", driver.findElement(By.id("error-message")).getText());	
 		}
 		else {
-			Assert.assertTrue(driver.getCurrentUrl().toLowerCase().contains("home.page"),"Current URL not contain 'home.page'\n Actual URL : "+driver.getCurrentUrl());
+			Assert.assertTrue(driver.getCurrentUrl().toLowerCase().contains("home.age"),"Current URL not contain 'home.page'\n Actual URL : "+driver.getCurrentUrl());
 		}
 		SoftAssertions.softAssertion("Failing of Assertion", "true", null, "false", "Why are you failing",null);
 	}

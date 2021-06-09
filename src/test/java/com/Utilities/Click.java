@@ -22,6 +22,7 @@ public class Click extends BaseTest{
 		driver.findElement(by).click();
 	}
 
+	@SuppressWarnings("deprecation")
 	protected static void click_And_WaitFor(By click_On, By waitFor) {
 		driver.findElement(click_On).click();
 		Visible.page_To_Load();
@@ -29,12 +30,14 @@ public class Click extends BaseTest{
 		wait.until(ExpectedConditions.presenceOfElementLocated(waitFor));		
 	}
 
+	@SuppressWarnings("deprecation")
 	protected static void Webdriver_click_Link_Text(String linkText){	
 		driver.findElement(By.linkText(linkText)).click();
 		(new WebDriverWait(driver, Contants.Expicit_wait_time)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//body")));	
 		Visible.page_To_Load();
 	}
 
+	@SuppressWarnings("deprecation")
 	protected static void Webdriver_click_PartialLink_Text(String linkText){
 		driver.findElement(By.partialLinkText(linkText)).click();
 		(new WebDriverWait(driver, Contants.Expicit_wait_time)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//body")));
@@ -63,6 +66,7 @@ public class Click extends BaseTest{
 		act.doubleClick().perform();Visible.page_To_Load();
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static void Webdriver_Link_In_New_TAB(By by)
 	{
 		

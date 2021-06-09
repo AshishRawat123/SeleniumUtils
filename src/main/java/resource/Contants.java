@@ -7,6 +7,6 @@ public class Contants {
 	public static String USER="Admin";
 	public static String PASS="Admin123";
 	public static int Expicit_wait_time = 15;
-	public static String DownLoad_Folder= "C://Download";
+	public static String Download_Folder= "C:\\Users\\91827\\eclipse-workspace\\Selenium-Docker";
 	public static String CURRENT_TEST_NAME;
 }
