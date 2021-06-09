@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="USER LOGIN(failed)">
+    <parameter name="SkipTest" value="FALSE"/>
+    <parameter name="willLogin" value="TRUE"/>
+    <parameter name="sessionFor" value="Inpatient Ward"/>
+    <classes>
+      <class name="com.Docker.Selenium_Docker.LoginTest">
+        <methods>
+          <include name="afterTest"/>
+          <include name="beforeClass"/>
+          <include name="beforeTest"/>
+          <include name="Login_Test"/>
+        </methods>
+      </class> <!-- com.Docker.Selenium_Docker.LoginTest -->
+    </classes>
+  </test> <!-- USER LOGIN(failed) -->
+  <test thread-count="5" name="USER LOGIN Invalid User(failed)">
+    <parameter name="willLogin" value="false"/>
+    <parameter name="sessionFor" value="Inpatient Ward"/>
+    <parameter name="username" value="Adminstrator"/>
+    <classes>
+      <class name="com.Docker.Selenium_Docker.LoginTest">
+        <methods>
+          <include name="afterTest"/>
+          <include name="beforeClass"/>
+          <include name="beforeTest"/>
+          <include name="Login_Test"/>
+        </methods>
+      </class> <!-- com.Docker.Selenium_Docker.LoginTest -->
+    </classes>
+  </test> <!-- USER LOGIN Invalid User(failed) -->
+</suite> <!-- Failed suite [Suite] -->
