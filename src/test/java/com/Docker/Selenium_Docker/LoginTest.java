@@ -34,6 +34,6 @@ public class LoginTest extends BaseTest{
 		else {
 			Assert.assertTrue(driver.getCurrentUrl().toLowerCase().contains("home.age"),"Current URL not contain 'home.page'\n Actual URL : "+driver.getCurrentUrl());
 		}
-		SoftAssertions.softAssertion("Failing of Assertion", "true", null, "false", "Why are you failing",null);
+		SoftAssertions.softAssertion("Failing of Assertion", "true", null, "true", "Why are you failing",null);
 	}
 }

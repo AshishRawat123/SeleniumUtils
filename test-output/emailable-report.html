@@ -8,29 +8,19 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">USER LOGIN</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">10,351</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">USER LOGIN Invalid User</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">6,767</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">1</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">17,118</th><th colspan="2"></th></tr>
+<tr><th colspan="8">LOGIN_WITH_VALID_INVALID_USER</th></tr>
+<tr><td><a href="#t0">USER LOGIN</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">18,995</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">USER LOGIN Invalid User</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">12,102</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">1</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">31,097</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">USER LOGIN &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.Docker.Selenium_Docker.LoginTest</td><td><a href="#m0">Login_Test</a></td><td rowspan="1">1623239589948</td><td rowspan="1">6215</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">USER LOGIN Invalid User &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.Docker.Selenium_Docker.LoginTest</td><td><a href="#m1">afterTest</a></td><td rowspan="1">1623239603173</td><td rowspan="1">658</td></tr><tr><th colspan="4">USER LOGIN Invalid User &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.Docker.Selenium_Docker.LoginTest</td><td><a href="#m2">Login_Test</a></td><td rowspan="1">1623239598385</td><td rowspan="1">4778</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">LOGIN_WITH_VALID_INVALID_USER</th></tr></tbody><tbody id="t0"><tr><th colspan="4">USER LOGIN &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.Docker.Selenium_Docker.LoginTest</td><td><a href="#m0">Login_Test</a></td><td rowspan="1">1623305921762</td><td rowspan="1">12247</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">USER LOGIN Invalid User &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.Docker.Selenium_Docker.LoginTest</td><td><a href="#m1">Login_Test</a></td><td rowspan="1">1623305937618</td><td rowspan="1">9381</td></tr></tbody>
 </table>
 <h2>USER LOGIN</h2><h3 id="m0">com.Docker.Selenium_Docker.LoginTest#Login_Test</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>Inpatient Ward</td><td>null</td><td>null</td><td>TRUE</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.AssertionError: Current URL not contain &apos;home.page&apos;
  Actual URL : https://demo.openmrs.org/openmrs/referenceapplication/home.page expected [true] but found [false]
 	at com.Docker.Selenium_Docker.LoginTest.Login_Test(LoginTest.java:35)
 	at java.util.ArrayList.forEach(ArrayList.java:1257)
 ... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>USER LOGIN Invalid User</h2><h3 id="m1">com.Docker.Selenium_Docker.LoginTest#afterTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	Test Name Failed : USER LOGIN Invalid User
-Failed while Validating  : Failing of Assertion
-Class Failed : com.Docker.Selenium_Docker.LoginTest
- METHOD FAILED  : Login_Test
- IN Line number : 37
-Assertion Fail in URL : https://demo.openmrs.org/openmrs/referenceapplication/login.page
- Failure Message  : Why are you failing expected [true] but found [false]
-	at resource.BaseTest.afterTest(BaseTest.java:86)
-... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.Docker.Selenium_Docker.LoginTest#Login_Test</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>Inpatient Ward</td><td>Adminstrator</td><td>null</td><td>false</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>USER LOGIN Invalid User</h2><h3 id="m1">com.Docker.Selenium_Docker.LoginTest#Login_Test</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>Inpatient Ward</td><td>Adminstrator</td><td>null</td><td>false</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

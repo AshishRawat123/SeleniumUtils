@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="LOGIN_WITH_VALID_INVALID_USER">
 	<test thread-count="5" name="USER LOGIN">
 	<parameter name="sessionFor" value="Inpatient Ward"  />
 	<parameter name="willLogin" value="TRUE"/>
@@ -17,15 +17,11 @@
 		<classes>
 			<class name="com.Docker.Selenium_Docker.LoginTest" />
 		</classes>
-	</test> <!-- Test -->
+	</test>
 	<test thread-count="5" name="USER LOGIN Invalid User">
 	<parameter name="sessionFor" value="Inpatient Ward"  />
 	<parameter name="username" value="Adminstrator" />
 	<parameter name="willLogin" value="false" />
-		
-		<!-- <groups> <include name = "Login"/> <include name = "Registor" /> </groups> 
-			<dependencies> <group name="Login" depends-on="Registor" /> </dependencies> -->
-
 		<classes>
 			<class name="com.Docker.Selenium_Docker.LoginTest" />
 		</classes>
