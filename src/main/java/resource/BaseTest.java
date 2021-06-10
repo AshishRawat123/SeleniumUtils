@@ -100,7 +100,7 @@ public class BaseTest {
 		if (result.getStatus() == ITestResult.FAILURE) {	
 			String screenshotName= method.getName()+System.currentTimeMillis()+".png";
 			String scrnshtpath= screenShot(screenshotName);
-			logger.addScreenCaptureFromPath(scrnshtpath);
+			logger.addScreenCaptureFromPath("."+scrnshtpath);
 			try {
 				softAssert.assertAll();
 				}
@@ -169,7 +169,7 @@ public class BaseTest {
 	public static String screenShot(String methodFailed) throws IOException {
 		TakesScreenshot scrShot =((TakesScreenshot)driver);
 		File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
-		String path = System.getProperty("user.dir")+"\\screenshot\\"+methodFailed;
+		String path = ".\\screenshot\\"+methodFailed;
 		File DestFile=new File(path);
 		FileUtils.copyFile(SrcFile, DestFile);
 		return path;

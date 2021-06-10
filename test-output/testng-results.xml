@@ -2,34 +2,34 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="LOGIN_WITH_VALID_INVALID_USER" duration-ms="30510" started-at="2021-06-10T17:26:05 IST" finished-at="2021-06-10T17:26:35 IST">
+  <suite name="LOGIN_WITH_VALID_INVALID_USER" duration-ms="31125" started-at="2021-06-10T17:45:00 IST" finished-at="2021-06-10T17:45:31 IST">
     <groups>
     </groups>
-    <test name="USER LOGIN" duration-ms="19918" started-at="2021-06-10T17:26:05 IST" finished-at="2021-06-10T17:26:25 IST">
+    <test name="USER LOGIN" duration-ms="19855" started-at="2021-06-10T17:45:00 IST" finished-at="2021-06-10T17:45:20 IST">
       <class name="com.Docker.Selenium_Docker.LoginTest">
-        <test-method status="PASS" signature="beforeTest(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@262b2c86]" name="beforeTest" is-config="true" duration-ms="6625" started-at="2021-06-10T17:26:05 IST" finished-at="2021-06-10T17:26:12 IST">
+        <test-method status="PASS" signature="beforeTest(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@262b2c86]" name="beforeTest" is-config="true" duration-ms="5386" started-at="2021-06-10T17:45:00 IST" finished-at="2021-06-10T17:45:05 IST">
           <params>
             <param index="0">
               <value is-null="true"/>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@426e505c]]>
+                <![CDATA[org.testng.TestRunner@4bee18dc]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@262b2c86]" name="beforeClass" is-config="true" duration-ms="102" started-at="2021-06-10T17:26:12 IST" finished-at="2021-06-10T17:26:12 IST">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@262b2c86]" name="beforeClass" is-config="true" duration-ms="153" started-at="2021-06-10T17:45:05 IST" finished-at="2021-06-10T17:45:05 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="before_Method()[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@262b2c86]" name="before_Method" is-config="true" duration-ms="0" started-at="2021-06-10T17:26:12 IST" finished-at="2021-06-10T17:26:12 IST">
+        <test-method status="PASS" signature="before_Method()[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@262b2c86]" name="before_Method" is-config="true" duration-ms="1" started-at="2021-06-10T17:45:05 IST" finished-at="2021-06-10T17:45:05 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before_Method -->
-        <test-method status="FAIL" signature="Login_Test(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@262b2c86]" name="Login_Test" duration-ms="11257" started-at="2021-06-10T17:26:12 IST" finished-at="2021-06-10T17:26:23 IST">
+        <test-method status="FAIL" signature="Login_Test(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@262b2c86]" name="Login_Test" duration-ms="12431" started-at="2021-06-10T17:45:05 IST" finished-at="2021-06-10T17:45:18 IST">
           <params>
             <param index="0">
               <value>
@@ -94,7 +94,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login_Test -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult, org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@262b2c86]" name="tearDown" is-config="true" duration-ms="409" started-at="2021-06-10T17:26:23 IST" finished-at="2021-06-10T17:26:23 IST">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult, org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@262b2c86]" name="tearDown" is-config="true" duration-ms="333" started-at="2021-06-10T17:45:18 IST" finished-at="2021-06-10T17:45:18 IST">
           <params>
             <param index="0">
               <value>
@@ -103,7 +103,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@426e505c]]>
+                <![CDATA[org.testng.TestRunner@4bee18dc]]>
               </value>
             </param>
             <param index="2">
@@ -115,48 +115,48 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@262b2c86]" name="afterTest" is-config="true" duration-ms="1454" started-at="2021-06-10T17:26:23 IST" finished-at="2021-06-10T17:26:25 IST">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@262b2c86]" name="afterTest" is-config="true" duration-ms="1444" started-at="2021-06-10T17:45:18 IST" finished-at="2021-06-10T17:45:20 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- com.Docker.Selenium_Docker.LoginTest -->
     </test> <!-- USER LOGIN -->
-    <test name="USER LOGIN Invalid User" duration-ms="10546" started-at="2021-06-10T17:26:25 IST" finished-at="2021-06-10T17:26:35 IST">
+    <test name="USER LOGIN Invalid User" duration-ms="11220" started-at="2021-06-10T17:45:20 IST" finished-at="2021-06-10T17:45:31 IST">
       <class name="com.Docker.Selenium_Docker.LoginTest">
-        <test-method status="PASS" signature="before_Suite(org.testng.ITestContext)[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@33723e30]" name="before_Suite" is-config="true" duration-ms="243" started-at="2021-06-10T17:26:05 IST" finished-at="2021-06-10T17:26:05 IST">
+        <test-method status="PASS" signature="before_Suite(org.testng.ITestContext)[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@33723e30]" name="before_Suite" is-config="true" duration-ms="258" started-at="2021-06-10T17:44:59 IST" finished-at="2021-06-10T17:45:00 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@614aeccc]]>
+                <![CDATA[org.testng.TestRunner@417d6615]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before_Suite -->
-        <test-method status="PASS" signature="beforeTest(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@33723e30]" name="beforeTest" is-config="true" duration-ms="1774" started-at="2021-06-10T17:26:25 IST" finished-at="2021-06-10T17:26:27 IST">
+        <test-method status="PASS" signature="beforeTest(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@33723e30]" name="beforeTest" is-config="true" duration-ms="1770" started-at="2021-06-10T17:45:20 IST" finished-at="2021-06-10T17:45:21 IST">
           <params>
             <param index="0">
               <value is-null="true"/>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@614aeccc]]>
+                <![CDATA[org.testng.TestRunner@417d6615]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@33723e30]" name="beforeClass" is-config="true" duration-ms="1" started-at="2021-06-10T17:26:27 IST" finished-at="2021-06-10T17:26:27 IST">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@33723e30]" name="beforeClass" is-config="true" duration-ms="2" started-at="2021-06-10T17:45:21 IST" finished-at="2021-06-10T17:45:21 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="before_Method()[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@33723e30]" name="before_Method" is-config="true" duration-ms="0" started-at="2021-06-10T17:26:27 IST" finished-at="2021-06-10T17:26:27 IST">
+        <test-method status="PASS" signature="before_Method()[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@33723e30]" name="before_Method" is-config="true" duration-ms="2" started-at="2021-06-10T17:45:21 IST" finished-at="2021-06-10T17:45:21 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before_Method -->
-        <test-method status="PASS" signature="Login_Test(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@33723e30]" name="Login_Test" duration-ms="7897" started-at="2021-06-10T17:26:27 IST" finished-at="2021-06-10T17:26:35 IST">
+        <test-method status="PASS" signature="Login_Test(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@33723e30]" name="Login_Test" duration-ms="8516" started-at="2021-06-10T17:45:21 IST" finished-at="2021-06-10T17:45:30 IST">
           <params>
             <param index="0">
               <value>
@@ -180,7 +180,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login_Test -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult, org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@33723e30]" name="tearDown" is-config="true" duration-ms="1" started-at="2021-06-10T17:26:35 IST" finished-at="2021-06-10T17:26:35 IST">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult, org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@33723e30]" name="tearDown" is-config="true" duration-ms="1" started-at="2021-06-10T17:45:30 IST" finished-at="2021-06-10T17:45:30 IST">
           <params>
             <param index="0">
               <value>
@@ -189,7 +189,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@614aeccc]]>
+                <![CDATA[org.testng.TestRunner@417d6615]]>
               </value>
             </param>
             <param index="2">
@@ -201,11 +201,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@33723e30]" name="afterTest" is-config="true" duration-ms="867" started-at="2021-06-10T17:26:35 IST" finished-at="2021-06-10T17:26:35 IST">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@33723e30]" name="afterTest" is-config="true" duration-ms="922" started-at="2021-06-10T17:45:30 IST" finished-at="2021-06-10T17:45:31 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="after_Suite()[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@33723e30]" name="after_Suite" is-config="true" duration-ms="0" started-at="2021-06-10T17:26:35 IST" finished-at="2021-06-10T17:26:35 IST">
+        <test-method status="PASS" signature="after_Suite()[pri:0, instance:com.Docker.Selenium_Docker.LoginTest@33723e30]" name="after_Suite" is-config="true" duration-ms="1" started-at="2021-06-10T17:45:31 IST" finished-at="2021-06-10T17:45:31 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after_Suite -->
