@@ -11,10 +11,10 @@
           <include name="afterTest"/>
           <include name="beforeClass"/>
           <include name="beforeTest"/>
+          <include name="before_Method"/>
           <include name="after_Suite"/>
           <include name="Login_Test" invocation-numbers="0"/>
           <include name="before_Suite"/>
-          <include name="before_Method"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.Docker.Selenium_Docker.LoginTest -->

@@ -1,8 +1,11 @@
 package com.Docker.Selenium_Docker;
 
+import java.lang.reflect.Method;
+
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -20,6 +23,13 @@ public class LoginTest extends BaseTest{
 	public void beforeClass() {
 		login = new Login();
 	}
+	
+	@BeforeMethod()
+	public void before_Method(Method methodName) {
+
+		//Note: this method will override the method of BaseClass beforeMethod
+		System.out.println("before method of Test class");
+	}
  
 	@Test()
 	@Parameters({"sessionFor","username","password","willLogin"})
@@ -33,7 +43,7 @@ public class LoginTest extends BaseTest{
 			Assert.assertEquals("Invalid username/password. Please try again.", driver.findElement(By.id("error-message")).getText());	
 		}
 		else {
-			Assert.assertTrue(driver.getCurrentUrl().toLowerCase().contains("home.age"),"Current URL not contain 'home.page'\n Actual URL : "+driver.getCurrentUrl());
+			Assert.assertTrue(driver.getCurrentUrl().toLowerCase().contains("home.age"),"Current URL not contain 'home.age'\n Actual URL : "+driver.getCurrentUrl());
 		}
 	}
 }

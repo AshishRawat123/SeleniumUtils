@@ -85,13 +85,13 @@ public class BaseTest {
 	}
 	
 	@BeforeMethod()
-	public void before_Method() {
+	public void before_Method(Method methodName) {
 		//If tests are methods then use below code
 		/*
-		 
-		 
-		 
-		 */
+		 logger = extentReport.createTest(methodName.getName());
+		 softAssert = new SoftAssert();
+		*/
+		System.out.println("before method of base class");
 	}
 	
 	@AfterMethod(alwaysRun = true)
@@ -99,6 +99,7 @@ public class BaseTest {
 		//   Add ScreenShot on failure
 		if (result.getStatus() == ITestResult.FAILURE) {	
 			String screenshotName= method.getName()+System.currentTimeMillis()+".png";
+			logger.log(Status.FATAL, MarkupHelper.createLabel("<a href='"+driver.getCurrentUrl()+"' target='_blank'>Test Failed URL</a>", ExtentColor.LIME));
 			String scrnshtpath= screenShot(screenshotName);
 			logger.addScreenCaptureFromPath("."+scrnshtpath);
 			try {
@@ -106,7 +107,7 @@ public class BaseTest {
 				}
 				catch (AssertionError e) {
 					if(!isLogged) {
-					logger.log(Status.WARNING, MarkupHelper.createLabel("SoftAssertion Failed\n"+e.getMessage(), ExtentColor.PURPLE));
+					logger.log(Status.WARNING, MarkupHelper.createLabel(e.getMessage(), ExtentColor.PURPLE));
 					isLogged=true;
 					}
 				}
@@ -132,7 +133,7 @@ public class BaseTest {
 		}
 		catch (AssertionError e) {
 			if(!isLogged)
-			logger.log(Status.INFO, MarkupHelper.createLabel("SoftAssertion Failed\n"+e.getMessage(), ExtentColor.PURPLE));
+			logger.log(Status.INFO, MarkupHelper.createLabel(e.getMessage(), ExtentColor.PURPLE));
 		}
 		isLogged=false;
 		extentReport.flush();
