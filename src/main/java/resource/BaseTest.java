@@ -32,6 +32,9 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.MediaEntityModelProvider;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
@@ -45,15 +48,12 @@ public class BaseTest {
 	private ExtentHtmlReporter extentHTMLReporter;
 	private static ExtentReports extentReport;
 	public static ExtentTest logger;
-	
-	public BaseTest() {
-	}
+	private boolean  isLogged= false;
 	
 	@BeforeSuite()
 	public void before_Suite(ITestContext context){
 		
 		Contants.Download_Folder = System.getProperty("user.dir")+"\\download";	
-		System.out.println(Contants.Download_Folder+"\nSUITE NAME  "+context.getSuite().getName());
 		extentHTMLReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/ExtentReport/"+context.getSuite().getName()+System.currentTimeMillis()+".html");
 		extentHTMLReporter.config().setTheme(Theme.DARK);	
 		extentReport = new ExtentReports();  
@@ -99,20 +99,42 @@ public class BaseTest {
 		//   Add ScreenShot on failure
 		if (result.getStatus() == ITestResult.FAILURE) {	
 			String screenshotName= method.getName()+System.currentTimeMillis()+".png";
-			screenShot(screenshotName);
-			logger.addScreenCaptureFromPath(screenshotName);
-			logger.fail("Test Failed at method "+method.getName());	
+			String scrnshtpath= screenShot(screenshotName);
+			logger.addScreenCaptureFromPath(scrnshtpath);
+			try {
+				softAssert.assertAll();
+				}
+				catch (AssertionError e) {
+					if(!isLogged) {
+					logger.log(Status.WARNING, MarkupHelper.createLabel("SoftAssertion Failed\n"+e.getMessage(), ExtentColor.PURPLE));
+					isLogged=true;
+					}
+				}
+			logger.log(Status.FAIL, MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
 		}	
+		/*
+		 * SKIP=3
+		 * SUCESS=1
+		 * FAILURE = 2
+		 * */
 		else if(result.getStatus()==3) {
-			//Add Logger
-		}	
+			logger.log(Status.SKIP, MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.ORANGE));
+		}
 	}   
 	
 	
 	@AfterTest(alwaysRun = true)
 	public void afterTest(){
 		driver.quit();
+		//softAssert.assertAll();
+		try {
 		softAssert.assertAll();
+		}
+		catch (AssertionError e) {
+			if(!isLogged)
+			logger.log(Status.INFO, MarkupHelper.createLabel("SoftAssertion Failed\n"+e.getMessage(), ExtentColor.PURPLE));
+		}
+		isLogged=false;
 		extentReport.flush();
 	}
 	
@@ -144,12 +166,13 @@ public class BaseTest {
 		System.out.println("FIREFOX LAUNCHED");
 	}
 	
-	public static void screenShot(String methodFailed) throws IOException {
+	public static String screenShot(String methodFailed) throws IOException {
 		TakesScreenshot scrShot =((TakesScreenshot)driver);
 		File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
-		System.out.println(System.getProperty("user.dir")+"\n method name   : "+methodFailed.replace(" ",""));
-		File DestFile=new File(System.getProperty("user.dir")+"\\screenshot\\"+methodFailed);
+		String path = System.getProperty("user.dir")+"\\screenshot\\"+methodFailed;
+		File DestFile=new File(path);
 		FileUtils.copyFile(SrcFile, DestFile);
+		return path;
 	}
 	
 //	public static long convertCurrentTimeToMS() throws ParseException {

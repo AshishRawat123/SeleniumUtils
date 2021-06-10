@@ -43,7 +43,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Jun 10, 2021 11:48:36 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Jun 10, 2021 05:26:05 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -126,13 +126,13 @@
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>USER LOGIN</span>
-						<span class='test-time'>Jun 10, 2021 11:48:36 AM</span>
+						<span class='test-time'>Jun 10, 2021 05:26:05 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Jun 10, 2021 11:48:36 AM</span>
-	<span class='label end-time'>Jun 10, 2021 11:48:36 AM</span>
+	<span class='label start-time'>Jun 10, 2021 05:26:05 PM</span>
+	<span class='label end-time'>Jun 10, 2021 05:26:05 PM</span>
 	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
 </div>
 <div class='test-steps'>
@@ -145,11 +145,28 @@
 			</tr>
 		</thead>
 		<tbody>
+			<tr class='log' status='warning'>
+				<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+				<td class='timestamp'>5:26:23 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text purple'>SoftAssertion Failed
+The following asserts failed:
+	Test Name Failed : USER LOGIN
+Failed while Validating  : Failing of Assertion
+Class Failed : com.Docker.Selenium_Docker.LoginTest
+METHOD FAILED  : Login_Test
+In Line number : 30
+Assertion Fail in URL : https://demo.openmrs.org/openmrs/referenceapplication/home.page
+Failure Message  : Why are you failing expected [true] but found [false]</span>
+					
+				</td>
+			</tr>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>11:48:54 AM</td>
+				<td class='timestamp'>5:26:23 PM</td>
 				<td class='step-details'>
-						Test Failed at method Login_Test
+						<span class='badge white-text red'>java.lang.AssertionError: Current URL not contain 'home.page'
+ Actual URL : https://demo.openmrs.org/openmrs/referenceapplication/home.page expected [true] but found [false] - Test Case Failed</span>
 					
 				</td>
 			</tr>
@@ -157,21 +174,50 @@
 	</table>
 </div>
 						<ul class='screenshots'>
-							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='Login_Test1623305934021.png' src='Login_Test1623305934021.png' data-src='Login_Test1623305934021.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\91827\eclipse-workspace\Selenium-Docker\screenshot\Login_Test1623326183506.png' src='C:\Users\91827\eclipse-workspace\Selenium-Docker\screenshot\Login_Test1623326183506.png' data-src='C:\Users\91827\eclipse-workspace\Selenium-Docker\screenshot\Login_Test1623326183506.png'></li>
 						</ul>
 					</div>
 				</li>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
 					<div class='test-heading'>
 						<span class='test-name'>USER LOGIN Invalid User</span>
-						<span class='test-time'>Jun 10, 2021 11:48:55 AM</span>
+						<span class='test-time'>Jun 10, 2021 05:26:25 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Jun 10, 2021 11:48:55 AM</span>
-	<span class='label end-time'>Jun 10, 2021 11:48:55 AM</span>
+	<span class='label start-time'>Jun 10, 2021 05:26:25 PM</span>
+	<span class='label end-time'>Jun 10, 2021 05:26:25 PM</span>
 	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:26:35 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text purple'>SoftAssertion Failed
+The following asserts failed:
+	Test Name Failed : USER LOGIN Invalid User
+Failed while Validating  : Failing of Assertion
+Class Failed : com.Docker.Selenium_Docker.LoginTest
+METHOD FAILED  : Login_Test
+In Line number : 30
+Assertion Fail in URL : https://demo.openmrs.org/openmrs/referenceapplication/login.page
+Failure Message  : Why are you failing expected [true] but found [false]</span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
 					</div>
 				</li>
@@ -215,19 +261,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jun 10, 2021 11:48:36 AM</div>
+					<div class='panel-lead'>Jun 10, 2021 05:26:05 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jun 10, 2021 11:49:07 AM</div>
+			 		<div class='panel-lead'>Jun 10, 2021 05:26:35 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 31s+24ms</div>
+					<div class='panel-lead'>0h 0m 30s+569ms</div>
 				</div>
 			</div>
 			<div class='col s4'>

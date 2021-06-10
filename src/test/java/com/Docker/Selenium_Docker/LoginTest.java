@@ -27,6 +27,7 @@ public class LoginTest extends BaseTest{
 		username=(username==null)? Contants.USER:username;
 		password=(password==null)?Contants.PASS:password;
 		login.user_Login(sessionFor ,username ,password);
+		SoftAssertions.softAssertion("Failing of Assertion", "true", null, "false", "Why are you failing",null);
 		if(!Boolean.parseBoolean(willLogin.toLowerCase())) {
 			Assert.assertTrue(driver.findElement(By.id("error-message")).isDisplayed());
 			Assert.assertEquals("Invalid username/password. Please try again.", driver.findElement(By.id("error-message")).getText());	
@@ -34,6 +35,5 @@ public class LoginTest extends BaseTest{
 		else {
 			Assert.assertTrue(driver.getCurrentUrl().toLowerCase().contains("home.age"),"Current URL not contain 'home.page'\n Actual URL : "+driver.getCurrentUrl());
 		}
-		SoftAssertions.softAssertion("Failing of Assertion", "true", null, "true", "Why are you failing",null);
 	}
 }
