@@ -38,6 +38,7 @@ public class LoginTest extends BaseTest{
 		password=(password==null)?Contants.PASS:password;
 		login.user_Login(sessionFor ,username ,password);
 		SoftAssertions.softAssertion("Failing of Assertion", "true", null, "false", "Why are you failing",null);
+		SoftAssertions.softAssertion("Second Assertion Failure", "true", null, "false", "Check 2nd Failure",null);
 		if(!Boolean.parseBoolean(willLogin.toLowerCase())) {
 			Assert.assertTrue(driver.findElement(By.id("error-message")).isDisplayed());
 			Assert.assertEquals("Invalid username/password. Please try again.", driver.findElement(By.id("error-message")).getText());	

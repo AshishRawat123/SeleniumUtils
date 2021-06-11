@@ -14,13 +14,13 @@ public class SoftAssertions extends BaseTest{
 	{
 		if(!hmap.containsKey(UniqueName)) {
 			StackTraceElement errorStack = new Exception().getStackTrace()[1];
-			String assertion_Test_Details = "Test Name Failed : "+Contants.CURRENT_TEST_NAME+
-					"<br>Failed while Validating  : "+UniqueName+
-					"</br>Class Failed : "+errorStack.getClassName().toString()+
-					"<br>METHOD FAILED & and Line number : "+errorStack.getMethodName().toString()+" -- "+errorStack.getLineNumber()+
+			String assertion_Test_Details = "<br>*******************Test Name Failed : "+Contants.CURRENT_TEST_NAME+"*******************</br>"+
+					"<br>Failed while Validating  : "+UniqueName+"</br>"+
+					"Class Failed : "+errorStack.getClassName().toString()+
+					"<br>METHOD FAILED & and Line number : "+errorStack.getMethodName().toString()+" -- "+errorStack.getLineNumber()+"</br>"+
 //					"</br>In Line number : "+errorStack.getLineNumber()+
-					"</br><br>Failure Message  : "+failure_message+
-					"</br>Assertion Fail in URL : <a href='"+driver.getCurrentUrl()+"' target='_blank'>Click here</br>\n";
+					"<br>Failure Message  : "+failure_message+
+					"</br>Assertion Fail in URL : <a href='"+driver.getCurrentUrl()+"' target='_blank'>Click here</a>\n";
 
 			switch(type) {
 			case "equals" :
