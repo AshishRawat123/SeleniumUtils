@@ -18,7 +18,6 @@ public class SoftAssertions extends BaseTest{
 					"<br>Failed while Validating  : "+UniqueName+"</br>"+
 					"Class Failed : "+errorStack.getClassName().toString()+
 					"<br>METHOD FAILED & and Line number : "+errorStack.getMethodName().toString()+" -- "+errorStack.getLineNumber()+"</br>"+
-//					"</br>In Line number : "+errorStack.getLineNumber()+
 					"<br>Failure Message  : "+failure_message+
 					"</br>Assertion Fail in URL : <a href='"+driver.getCurrentUrl()+"' target='_blank'>Click here</a>\n";
 

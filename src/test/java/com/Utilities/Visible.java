@@ -11,6 +11,10 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+
 import resource.BaseTest;
 import resource.Contants;
 
@@ -42,7 +46,7 @@ public class Visible extends BaseTest{
 			return true;
 		}catch(Exception e) 
 		{
-			System.out.println("Element not present hence returning false");
+			logger.log(Status.INFO, MarkupHelper.createLabel("Element not present having locator : "+by.toString(), ExtentColor.BROWN));
 			return false;}
 
 	}
@@ -73,7 +77,8 @@ public class Visible extends BaseTest{
 					});
 		}
 		catch (Exception e) {
-			System.out.println("Element is not present with Text "+validate_Text+"/nBy :"+by.toString());return false;
+			System.out.println("Element is not present with Text "+validate_Text+"/nBy :"+by.toString());
+			return false;
 	}
 		return false;
 	}

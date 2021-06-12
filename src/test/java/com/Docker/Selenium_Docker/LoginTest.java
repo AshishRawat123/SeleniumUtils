@@ -37,8 +37,10 @@ public class LoginTest extends BaseTest{
 		username=(username==null)? Contants.USER:username;
 		password=(password==null)?Contants.PASS:password;
 		login.user_Login(sessionFor ,username ,password);
-		SoftAssertions.softAssertion("Failing of Assertion", "true", null, "false", "Why are you failing",null);
+		SoftAssertions.softAssertion("SHOULD NOT BE PRESENT ON REPORTING ", "true", null, "true", "should not be on EXTENT REPORT",null);
+		SoftAssertions.softAssertion("Test Assertion", "true", null, "false", "Why are you failing",null);
 		SoftAssertions.softAssertion("Second Assertion Failure", "true", null, "false", "Check 2nd Failure",null);
+		SoftAssertions.softAssertion("Check presence of element on DOM", "present", null,null, "Check Element present in DOM ",By.xpath("//div/span/abc"));
 		if(!Boolean.parseBoolean(willLogin.toLowerCase())) {
 			Assert.assertTrue(driver.findElement(By.id("error-message")).isDisplayed());
 			Assert.assertEquals("Invalid username/password. Please try again.", driver.findElement(By.id("error-message")).getText());	
